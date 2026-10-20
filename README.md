@@ -1,9 +1,28 @@
-# WMS — Warehouse Management System Training Platform
+<div align="center">
 
-My first full-stack web project — a warehouse training and management platform built with PHP and MySQL.
+<img src="img/storage.png" alt="WMS Logo" width="120" />
 
-![Homepage](img/preview-home.gif)
-<!-- ↑ Replace with a GIF or screenshot of your homepage -->
+<br/>
+<br/>
+
+<h1>
+  <span style="background: linear-gradient(90deg, #38bdf8, #a855f7); -webkit-background-clip: text; background-clip: text; color: transparent; font-size: 2.5em; font-weight: 800;">
+    Warehouse Training Project
+  </span>
+</h1>
+
+<p style="color: #64748b; font-size: 1.1em;">
+  A full-stack warehouse management & training platform built with PHP and MySQL
+</p>
+
+<p>
+  <img src="https://img.shields.io/badge/PHP-8.x-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP" />
+  <img src="https://img.shields.io/badge/MySQL-5.7+-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/Bootstrap-5-7952B3?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+  <img src="https://img.shields.io/badge/License-Educational-38bdf8?style=flat-square" alt="License" />
+</p>
+
+</div>
 
 ## 💭 Why I built this
 
