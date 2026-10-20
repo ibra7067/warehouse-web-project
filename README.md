@@ -5,12 +5,8 @@
 <br/>
 <br/>
 
-<h1>
-  <span style="background: linear-gradient(90deg, #38bdf8, #a855f7); -webkit-background-clip: text; background-clip: text; color: transparent; font-size: 2.5em; font-weight: 800;">
-    Warehouse Training Project
-  </span>
-</h1>
-$${\color{#38bdf8}\textsf{\textbf{Warehouse}} \space \color{#a855f7}\textsf{\textbf{Training Project}}}$$
+ $${\color{#38bdf8}\textsf{\textbf{Warehouse}} \space \color{#a855f7}\textsf{\textbf{Training Project}}}$$
+ 
 <p style="color: #64748b; font-size: 1.1em;">
   A full-stack warehouse management & training platform built with PHP and MySQL
 </p>
