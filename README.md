@@ -1,4 +1,5 @@
 
+
  
 <div align="center">
 
@@ -66,11 +67,8 @@ When signing up, users pick their role through an interactive 3D carousel — ca
 ![Customer Order](img/preview-order.gif)
 
 ### 📊 Manager Dashboard
-- Inventory health analytics with circular progress charts
-- Add / edit / delete inventory items
-- Approve or reject customer orders
-- View customer feedback
-- Evaluate employee performance
+ 
+  <img width="800" height="451" alt="download (2)" src="https://github.com/user-attachments/assets/63c8903a-4bfe-42b0-ac75-ea92e677228f" />
 
 ![Manager Dashboard](img/preview-manager.gif)
 
