@@ -1,10 +1,7 @@
  
 <div align="center">
 
-<img src="https://github.com/user-attachments/assets/04381a16-08d4-473d-9d98-a21880a6431e" alt="bc-removebg-preview" width="290"   />
-
- 
- 
+<img src="https://github.com/user-attachments/assets/04381a16-08d4-473d-9d98-a21880a6431e" alt="bc-removebg-preview" width="330"   />
 
 $${\color{#38bdf8}\textsf{\textbf{Warehouse}} \space \color{#a855f7}\textsf{\textbf{Training Project}}}$$
 
