@@ -1,3 +1,4 @@
+
  
 <div align="center">
 
@@ -25,6 +26,9 @@ I wanted to understand how a real web application works — not just tutorials, 
 Warehouse management seemed like the perfect subject: it's practical, it has clear user roles (customers, employees, managers, suppliers), and the workflows are real. Instead of building a fake demo, I built something that could actually be used to train warehouse staff.
 
 The goal: **teach warehouse operations through an interactive platform**, not a dry PDF manual.
+
+<img width="800" height="451" alt="download (1)" src="https://github.com/user-attachments/assets/fa4cccf5-08cd-4a85-b9ea-90cc3eef6bfa" />
+
 
 ## 🎯 What it does
 
