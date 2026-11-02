@@ -59,10 +59,8 @@ When signing up, users pick their role through an interactive 3D carousel — ca
 ![Role Carousel](img/preview-carousel.gif)
 
 ### 🛒 Customer Experience
-- View available inventory with live stock counts
-- Place orders by quantity
-- Track order status (pending → approved → processing → shipped → delivered)
-- Submit feedback with star rating
+ <img width="800" height="451" alt="download (3)" src="https://github.com/user-attachments/assets/6fd759ff-3c28-49dc-896c-0ff5c9a3d52c" />
+
 
 ![Customer Order](img/preview-order.gif)
 
