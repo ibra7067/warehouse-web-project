@@ -1,6 +1,7 @@
+ 
 <div align="center">
 
-<img src="img/storage.png" alt="WMS Logo" width="120" />
+<img src="https://github.com/user-attachments/assets/04381a16-08d4-473d-9d98-a21880a6431e" alt="bc-removebg-preview" width="120" />
 
 <br/>
 <br/>
