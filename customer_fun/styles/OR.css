@@ -1,0 +1,582 @@
+/* =========================================================
+   Customer Pages (Orders + Feedback) — WMS Dark Theme
+   ========================================================= */
+
+:root {
+    --primary: #38bdf8;
+    --purple: #a855f7;
+    --pink: #f472b6;
+    --dark: #0f172a;
+    --dark-2: #1e293b;
+    --muted: #94a3b8;
+    --text: #cbd5e1;
+
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+    --success-color: #10b981;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+.customer-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================================================
+   LEFT PANEL — NAV
+   ========================================================= */
+.left-panel {
+    width: 260px;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-menu {
+    flex-grow: 1;
+}
+
+.nav-item {
+    display: block;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #cbd5e1;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    background: rgba(56, 189, 248, 0.15);
+    color: #fff;
+}
+
+.nav-item.active {
+    background: linear-gradient(90deg, rgba(56, 189, 248, 0.25), rgba(168, 85, 247, 0.25));
+    color: #fff;
+    border-left: 3px solid #38bdf8;
+    padding-left: 12px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 12px 15px;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: auto;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.35);
+}
+
+/* =========================================================
+   RIGHT PANEL — CONTENT
+   ========================================================= */
+.right-panel {
+    flex-grow: 1;
+    padding: 30px 40px;
+    background: transparent;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.right-panel::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.1), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.panel-title {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    color: #fff;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(56, 189, 248, 0.4);
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================================
+   ALERTS
+   ========================================================= */
+.alert {
+    padding: 15px 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    font-size: 0.92rem;
+    position: relative;
+    z-index: 1;
+}
+
+.alert-success {
+    background-color: rgba(16, 185, 129, 0.15);
+    border-color: rgba(16, 185, 129, 0.4);
+    color: #34d399;
+}
+
+.alert-danger {
+    background-color: rgba(239, 68, 68, 0.15);
+    border-color: rgba(239, 68, 68, 0.4);
+    color: #f87171;
+}
+
+/* =========================================================
+   ORDER TABLE
+   ========================================================= */
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -18px rgba(0, 0, 0, 0.7);
+    color: #0f172a;
+    position: relative;
+    z-index: 1;
+}
+
+.order-table th {
+    background: linear-gradient(90deg, #80a7b8, #816997);
+    color: #fff;
+    padding: 15px 18px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.order-table td {
+    padding: 15px 18px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+.order-table tr:last-child td {
+    border-bottom: none;
+}
+
+.order-table tr:hover {
+    background-color: #f8fafc;
+}
+
+/* =========================================================
+   QUANTITY INPUT
+   ========================================================= */
+.quantity-input {
+    width: 80px;
+    padding: 8px 10px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.92rem;
+    color: #0f172a;
+    background: #f8fafc;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.quantity-input:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+    background: #fff;
+}
+
+/* =========================================================
+   STATUS BADGES
+   ========================================================= */
+.status-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.status-pending {
+    background: linear-gradient(90deg, #f59e0b, #f97316);
+}
+
+.status-approved {
+    background: linear-gradient(90deg, #10b981, #059669);
+}
+
+.status-rejected {
+    background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+.status-processing {
+    background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+}
+
+.status-shipped {
+    background: linear-gradient(90deg, #a855f7, #8b5cf6);
+}
+
+.status-delivered {
+    background: linear-gradient(90deg, #6366f1, #4f46e5);
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+.btn {
+    padding: 12px 26px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 0.3px;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(168, 85, 247, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+    color: #fff;
+}
+
+/* =========================================================
+   FORM GROUPS & BUTTON GROUP
+   ========================================================= */
+.form-group {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* =========================================================
+   CONTENT PANELS
+   ========================================================= */
+.content-panel {
+    display: none;
+}
+
+.content-panel.active {
+    display: block;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+.empty-state {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    padding: 40px 30px;
+    border-radius: 16px;
+    text-align: center;
+    color: #94a3b8;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================================
+   RATING COMPONENT
+   ========================================================= */
+.rating-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 5px;
+}
+
+.rating-option {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.rating-option input[type="radio"] {
+    display: none;
+}
+
+.rating-option label {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #7f9abb;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.rating-option label:hover {
+    background-color: rgba(56, 189, 248, 0.15);
+    border-color: rgba(56, 189, 248, 0.4);
+    color: #fff;
+}
+
+.rating-option input[type="radio"]:checked + label {
+    background: linear-gradient(135deg, #38bdf8, #a855f7);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(56, 189, 248, 0.4);
+    transform: scale(1.05);
+}
+
+.star-rating {
+    color: #fbbf24;
+    font-size: 24px;
+    text-shadow: 0 0 8px rgba(251, 191, 36, 0.4);
+}
+
+/* =========================================================
+   FEEDBACK CARD
+   ========================================================= */
+.right-panel .card {
+    background: #ffffff;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -18px rgba(0, 0, 0, 0.7);
+}
+
+.right-panel .card-header {
+    background: linear-gradient(90deg, #6395aa, #9a7eb4) !important;
+    color: #ffffff !important;
+    padding: 18px 22px;
+    border: none;
+}
+
+.right-panel .card-header h4 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.3px;
+}
+
+.right-panel .card-body {
+    padding: 30px;
+    background: #cdd6e2;
+    color: #0f172a;
+}
+
+.right-panel .card-body .form-label {
+    color: #0f172a;
+    font-weight: 600;
+    font-size: 0.92rem;
+    margin-bottom: 8px;
+}
+
+.right-panel .card-body .form-control {
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    color: #0f172a;
+    background: #f8fafc;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.right-panel .card-body .form-control:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+    background: #d6d6d6;
+}
+
+.right-panel .card-body .btn-primary {
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    border: none;
+    border-radius: 10px;
+    padding: 12px 28px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.right-panel .card-body .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(168, 85, 247, 0.4);
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+}
+
+.right-panel .card-body .alert-success {
+    background-color: rgba(16, 185, 129, 0.15);
+    border-color: rgba(16, 185, 129, 0.4);
+    color: #059669;
+    border-radius: 10px;
+    border-left: 4px solid #10b981;
+}
+
+/* Rating stars inside the white card — darker tones */
+.right-panel .card-body .rating-option label {
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+}
+
+.right-panel .card-body .rating-option label:hover {
+    background-color: #e0f2fe;
+    border-color: #38bdf8;
+    color: #0f172a;
+}
+
+.right-panel .card-body .rating-option input[type="radio"]:checked + label {
+    background: linear-gradient(135deg, #38bdf8, #a855f7);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(56, 189, 248, 0.4);
+    transform: scale(1.05);
+}
+
+/* Override Bootstrap .bg-primary globally */
+.bg-primary {
+    background: linear-gradient(90deg, #38bdf8, #a855f7) !important;
+    color: #fff !important;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 768px) {
+    .customer-container {
+        flex-direction: column;
+    }
+
+    .left-panel {
+        width: 100%;
+        padding: 15px 20px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .logo {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 15px;
+    }
+
+    .nav-item {
+        margin-bottom: 0;
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+
+    .back-btn {
+        margin-top: 0;
+        width: auto;
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+
+    .right-panel {
+        padding: 20px;
+    }
+
+    .order-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .button-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .right-panel .card-body {
+        padding: 20px;
+    }
+}

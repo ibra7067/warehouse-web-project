@@ -1,0 +1,526 @@
+/* =========================================================
+   Customer Service Chat — WMS Dark Theme
+   ========================================================= */
+
+:root {
+    --primary: #38bdf8;
+    --purple: #a855f7;
+    --pink: #f472b6;
+    --dark: #0f172a;
+    --dark-2: #1e293b;
+    --muted: #94a3b8;
+    --text: #cbd5e1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* =========================================================
+   TOP HEADER BAR
+   ========================================================= */
+.header {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(12px);
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.header img {
+    width: 36px;
+    height: 36px;
+    filter: brightness(0) invert(1);
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+.main-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* =========================================================
+   LEFT PANEL — NAV
+   ========================================================= */
+.left-panel {
+    width: 260px;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-menu {
+    flex-grow: 1;
+}
+
+.nav-item {
+    display: block;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #cbd5e1;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    background: rgba(56, 189, 248, 0.15);
+    color: #fff;
+}
+
+.nav-item.active {
+    background: linear-gradient(90deg, rgba(56, 189, 248, 0.25), rgba(168, 85, 247, 0.25));
+    color: #fff;
+    border-left: 3px solid #38bdf8;
+    padding-left: 12px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: auto;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.35);
+}
+
+/* =========================================================
+   RIGHT PANEL — CONTENT
+   ========================================================= */
+.right-panel {
+    flex-grow: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+/* =========================================================
+   CHAT PANEL
+   ========================================================= */
+.chat-panel {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-header {
+    padding: 15px 20px;
+    background: rgba(30, 41, 59, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    font-weight: 600;
+    color: #fff;
+}
+
+.chatbot-messages {
+    flex: 1;
+    padding: 20px 10%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.chatbot-messages::-webkit-scrollbar {
+    width: 8px;
+}
+.chatbot-messages::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.03);
+}
+.chatbot-messages::-webkit-scrollbar-thumb {
+    background: rgba(56, 189, 248, 0.3);
+    border-radius: 4px;
+}
+
+.message {
+    max-width: 70%;
+    padding: 12px 16px;
+    line-height: 1.4;
+    border-radius: 18px;
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.user-message {
+    background: linear-gradient(135deg, #38bdf8, #a855f7);
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+    margin-right: 5%;
+    box-shadow: 0 6px 18px rgba(56, 189, 248, 0.3);
+}
+
+.bot-message {
+    background: #fff;
+    color: #0f172a;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    margin-left: 5%;
+}
+
+.chatbot-input-container {
+    padding: 15px 10%;
+    background: rgba(30, 41, 59, 0.9);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    gap: 10px;
+    position: sticky;
+    bottom: 0;
+}
+
+.chatbot-input {
+    flex: 1;
+    padding: 12px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(15, 23, 42, 0.8);
+    color: #fff;
+    border-radius: 24px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.chatbot-input::placeholder {
+    color: #94a3b8;
+}
+
+.chatbot-input:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+.send-button {
+    padding: 0 24px;
+    min-width: 80px;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.send-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
+}
+
+/* Typing indicator */
+.typing-indicator {
+    align-self: flex-start;
+    margin-left: 5%;
+    padding: 10px 16px;
+    background: #fff;
+    border-radius: 18px;
+    display: inline-flex;
+    gap: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.typing-indicator span {
+    height: 8px;
+    width: 8px;
+    background: #38bdf8;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2px;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-5px); }
+}
+
+/* =========================================================
+   MANAGER / CONTENT PANELS
+   ========================================================= */
+.manager-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+
+.content-panel {
+    flex: 1;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.content-panel.active {
+    display: flex;
+}
+
+.panel-title {
+    font-size: 1.6rem;
+    margin: 15px 0 25px 0;
+    color: #fff;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(56, 189, 248, 0.4);
+    font-weight: 700;
+}
+
+/* =========================================================
+   REPORT FORM
+   ========================================================= */
+.report-form {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 25px 50px -18px rgba(0, 0, 0, 0.7);
+    margin: 15px 0;
+    color: #0f172a;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #0f172a;
+    font-size: 0.92rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 16px;
+    background: #f8fafc;
+    color: #0f172a;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-family: inherit;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+    background: #fff;
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-button {
+    padding: 12px 24px;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(168, 85, 247, 0.4);
+}
+
+/* =========================================================
+   REPLIES
+   ========================================================= */
+.replies-container {
+    flex: 1;
+    padding: 15px 0;
+    overflow-y: auto;
+}
+
+.replies-container::-webkit-scrollbar {
+    width: 8px;
+}
+.replies-container::-webkit-scrollbar-thumb {
+    background: rgba(56, 189, 248, 0.3);
+    border-radius: 4px;
+}
+
+.reply {
+    padding: 16px 18px;
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 20px -8px rgba(0, 0, 0, 0.5);
+    color: #0f172a;
+}
+
+.reply-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #a855f7;
+    font-size: 0.9rem;
+}
+
+.reply-content {
+    white-space: pre-line;
+    color: #334155;
+    line-height: 1.6;
+}
+
+.empty-state {
+    padding: 40px;
+    text-align: center;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .left-panel {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        padding: 12px 20px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .logo {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+        margin-right: 20px;
+        font-size: 1.2rem;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 10px;
+    }
+
+    .nav-item {
+        margin-bottom: 0;
+        padding: 8px 12px;
+        font-size: 0.88rem;
+    }
+
+    .back-btn {
+        margin-top: 0;
+        margin-left: auto;
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+
+    .right-panel {
+        flex-direction: column;
+    }
+
+    .chat-panel, .manager-panel {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .chatbot-messages {
+        padding: 15px 5%;
+    }
+
+    .message {
+        max-width: 85%;
+    }
+
+    .chatbot-input-container {
+        padding: 12px 5%;
+    }
+
+    .panel-title {
+        font-size: 1.3rem;
+    }
+
+    .report-form {
+        padding: 18px;
+    }
+}

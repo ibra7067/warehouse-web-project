@@ -1,0 +1,366 @@
+/* =========================================================
+   Manager Section — WMS Dark Theme
+   ========================================================= */
+
+:root {
+    --primary: #38bdf8;
+    --purple: #a855f7;
+    --pink: #f472b6;
+    --dark: #0f172a;
+    --dark-2: #1e293b;
+    --muted: #94a3b8;
+    --text: #cbd5e1;
+
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+    --success-color: #10b981;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #7c869c 0%, #1e293b 50%, #0f172a 100%);
+    color: #fff;
+    min-height: 100vh;
+}
+
+.management-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================================================
+   LEFT PANEL — NAV
+   ========================================================= */
+.left-panel {
+    width: 260px;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-menu {
+    flex-grow: 1;
+}
+
+.nav-item {
+    display: block;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #cbd5e1;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    background: rgba(56, 189, 248, 0.15);
+    color: #fff;
+}
+
+.nav-item.active {
+    background: linear-gradient(90deg, rgba(56, 189, 248, 0.25), rgba(168, 85, 247, 0.25));
+    color: #fff;
+    border-left: 3px solid #38bdf8;
+    padding-left: 12px;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 12px 15px;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: auto;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.35);
+}
+
+/* =========================================================
+   RIGHT PANEL — CONTENT
+   ========================================================= */
+.right-panel {
+    flex-grow: 1;
+    padding: 30px 40px;
+    background: transparent;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.right-panel::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.1), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.panel-title {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    color: #fff;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(56, 189, 248, 0.4);
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================================
+   ORDER TABLE
+   ========================================================= */
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -18px rgba(0, 0, 0, 0.7);
+    color: #0f172a;
+    position: relative;
+    z-index: 1;
+}
+
+.order-table th {
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    color: #fff;
+    padding: 15px 18px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.order-table td {
+    padding: 15px 18px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+    color: #334155;
+}
+
+.order-table tr:last-child td {
+    border-bottom: none;
+}
+
+.order-table tr:hover {
+    background-color: #f8fafc;
+}
+
+/* =========================================================
+   STATUS BADGES
+   ========================================================= */
+.status-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.status-pending {
+    background: linear-gradient(90deg, #f59e0b, #f97316);
+}
+
+.status-approved {
+    background: linear-gradient(90deg, #10b981, #059669);
+}
+
+.status-rejected {
+    background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+.status-processing {
+    background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+}
+
+.status-shipped {
+    background: linear-gradient(90deg, #a855f7, #8b5cf6);
+}
+
+.status-delivered {
+    background: linear-gradient(90deg, #6366f1, #4f46e5);
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+.btn {
+    padding: 9px 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 0.88rem;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px;
+    letter-spacing: 0.2px;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(56, 189, 248, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(168, 85, 247, 0.4);
+}
+
+.btn-success {
+    background: linear-gradient(90deg, #10b981, #059669);
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(16, 185, 129, 0.3);
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.45);
+}
+
+.btn-danger {
+    background: linear-gradient(90deg, #ef4444, #dc2626);
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(239, 68, 68, 0.3);
+}
+
+.btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(239, 68, 68, 0.45);
+}
+
+.btn-info {
+    background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(56, 189, 248, 0.3);
+}
+
+.btn-info:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.45);
+}
+
+.btn-warning {
+    background: linear-gradient(90deg, #f59e0b, #f97316);
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(245, 158, 11, 0.3);
+}
+
+.btn-warning:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(245, 158, 11, 0.45);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 768px) {
+    .management-container {
+        flex-direction: column;
+    }
+
+    .left-panel {
+        width: 100%;
+        padding: 15px 20px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .logo {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 15px;
+    }
+
+    .nav-item {
+        margin-bottom: 0;
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+
+    .back-btn {
+        margin-top: 0;
+        width: auto;
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+
+    .right-panel {
+        padding: 20px;
+    }
+
+    .order-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn {
+        margin-bottom: 5px;
+        width: 100%;
+        text-align: center;
+    }
+}
