@@ -3,9 +3,11 @@
  
 <div align="center">
 
-<img src="https://github.com/user-attachments/assets/04381a16-08d4-473d-9d98-a21880a6431e" alt="bc-removebg-preview" width="330"   />
-
-$${\color{#38bdf8}\textsf{\textbf{Warehouse}} \space \color{#a855f7}\textsf{\textbf{Training Project}}}$$
+<img src="https://github.com/user-attachments/assets/04381a16-08d4-473d-9d98-a21880a6431e" alt="bc-removebg-preview" width="310"   />
+<h1>
+  <span style="color: #38bdf8;">Warehouse</span>
+  <span style="color: #a855f7;">Training Project</span>
+</h1>
 
 <p style="color: #64748b; font-size: 1.1em;">
   A full-stack warehouse management & training platform built with PHP and MySQL
@@ -128,5 +130,21 @@ In the XAMPP Control Panel:
 
 
  
+## 💭 Final Note
 
+I know this project might look like a beginner build to someone with years of experience — and that's fine. It *is* my first full-stack project, and I'm proud of it.
+
+I started this to learn how real web applications work, and I finished it with more questions than I started with — which is exactly what learning should feel like.
+
+Next stop? **Game development.** I'm a gamer at heart (Hoyoverse fan, if you couldn't guess), and this project taught me the fundamentals I'll need: state management, user flows, databases, UI/UX. All of it transfers.
+
+If you're reading this and you're also new to web development — take the simple build. Make the small thing. Push it to GitHub. You'll learn more in one project than in ten tutorials.
+
+It wasn't easy. But it was fun. And that's why it's worth finishing.
+
+---
+
+<div align="center">
+
+<span style="color: #38bdf8;">Thanks for stopping by 🌿</span>
 
