@@ -46,17 +46,10 @@ Each role sees only what's relevant to them. Same platform, different lenses.
 ## ✨ Features
 
 ### 🔐 Authentication
-- Register with role selection
-- Login with username or email
-- Security question for password recovery
-- Session-based authentication with role checks
+ <img width="800" height="451" alt="download (4)" src="https://github.com/user-attachments/assets/83002e7a-4d59-4bef-8cc5-5c205f619cc4" />
 
-![Register Flow](img/preview-register.gif)
 
-### 🎠 3D Role Selection
-When signing up, users pick their role through an interactive 3D carousel — cards rotate in a circular ring, flip to reveal details, and confirm the selection.
-
-![Role Carousel](img/preview-carousel.gif)
+ 
 
 ### 🛒 Customer Experience
  <img width="800" height="451" alt="download (3)" src="https://github.com/user-attachments/assets/6fd759ff-3c28-49dc-896c-0ff5c9a3d52c" />
@@ -74,12 +67,7 @@ When signing up, users pick their role through an interactive 3D carousel — ca
 - View current stock levels
 - Restock low-inventory items
 - Submit supply reports
-
-### 🎨 Modern UI
-- Dark theme with blue → purple gradient accents
-- Responsive design (mobile + desktop)
-- Smooth transitions and hover effects
-- Consistent design language across all pages
+ 
 
 ## 🛠️ Tech Stack
 
