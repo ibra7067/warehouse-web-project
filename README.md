@@ -79,7 +79,52 @@ Each role sees only what's relevant to them. Same platform, different lenses.
 | UI Framework | Bootstrap 5 |
 | Icons | Bootstrap Icons, Font Awesome |
 
-## 📂 Project Structure
+## 🚀 How to Run Locally (Using XAMPP)
+
+To run this project on your computer, you need a local web server. The easiest way is to use **XAMPP**, which includes Apache (the server), MySQL (the database), and PHP.
+
+### Step 1: Download and Install XAMPP
+
+1.  Go to the official download page: [https://www.apachefriends.org/download.html](https://www.apachefriends.org/download.html)
+2.  Download the **XAMPP installer for Windows** (or your operating system).
+3.  Run the installer. You can leave all the default settings (it will install to `C:\xampp`).
+4.  Once installed, open the **XAMPP Control Panel**.
+
+### Step 2: Start the Server
+
+In the XAMPP Control Panel:
+1.  Click **Start** next to **Apache**.
+2.  Click **Start** next to **MySQL**.
+3.  Both should turn green. If Apache fails to start, another program (like Skype) might be using port 80. Close it and try again.
+
+### Step 3: Download and Place the Project Files
+
+1.  **Download** this project (click the green "Code" button on GitHub -> "Download ZIP").
+2.  **Extract** the ZIP file.
+3.  Move the extracted folder into the `htdocs` directory inside your XAMPP installation. The path should look like this:
+    `C:\xampp\htdocs\warehouse_project`
+
+### Step 4: Set Up the Database
+
+1.  In your browser, go to: [http://localhost/phpmyadmin](http://localhost/phpmyadmin)
+2.  Click on the **"New"** button on the left sidebar.
+3.  Create a database named **`mydatabase`** (or any name you prefer) and click **Create**.
+4.  Click on the new database, then go to the **"Import"** tab at the top.
+5.  Click **"Choose File"** and select the database file provided in the project folder (e.g., `database.sql` or `warehouse.sql`).
+6.  Click **"Go"** at the bottom. You should see a success message.
+
+### Step 5: Configure the Project
+
+1.  Go to your project folder: `C:\xampp\htdocs\warehouse_project\include\`
+2.  Find the file **`config.database.example.php`**.
+3.  **Copy** this file and **paste** it in the same folder, renaming the copy to **`config.php`**.
+4.  Open `config.php` in a text editor (like Notepad or VS Code).
+5.  Update the database details if necessary. By default, it looks like this:
+    ```php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "database.example"; // Make sure this matches the name you created in Step 4
 
 
  
